@@ -1,0 +1,31 @@
+let User = prompt("Enter W(Water) , S(Snake) or G(Gun)")
+let CPUI = Math.floor(Math.random()*3)
+let CPU = ["W", "S", "G"][CPUI]
+
+const match= (User, CPU)=>{
+    if (User === CPU){
+        return "Matches"
+    }
+    else if(User == ("s" || "S") && CPU == "W"){
+        return "User is winner"
+    }
+    else if(User == ("s" || "S")&& CPU == "G"){
+        return "CPU is winner"
+    }
+    else if(User == ("w" || "W") && CPU == "G"){
+        return "User is winner"
+    }
+    else if(User == ("w" || "W")  && CPU == "S"){
+        return "CPU is winner"
+    }
+    else if(User == ("g" || "G")  && CPU == "W"){
+        return "CPU is winner"
+    }
+    else if(User == ("g" || "G")  && CPU == "S"){
+        return "User is winner"
+    }
+
+}
+
+let result = match(User, CPU)
+console.log(`User input: ${User} \nCPU input: ${CPU} \nResult: ${result}` )
